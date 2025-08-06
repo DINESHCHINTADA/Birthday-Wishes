@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Happy Birthday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Birthday Card -->
+  <div class="card">
+   <h1 class="birthday-heading">🎉 Happy Birthday🎁</h1>
+    <p>🌸👑 Happy Birthday to the Most Amazing Girl 👑🌸</p>
+
+    <p>
+      Hey Bestie! 🦢 On your special day, I just want to say...💙🎂 <br>
+      You're not just a friend – you're a whole blessing in my life 💫👑 <br>
+      Your smile brightens my worst days 😊🌈 <br>
+      Your words heal like magic ✨💬
+    </p>
+
+    <p>
+      May your birthday be as sweet as your soul 🍰🍭 <br>
+      Filled with love ❤️, laughter 😄, and unforgettable memories 📸✨ <br>
+      You deserve nothing but the BEST, always 💖💯
+    </p>
+
+    <p>
+      Let's celebrate YOU today, the queen of hearts 👑🎈 <br>
+      Stay fabulous, fearless, and forever YOU 🔥💫
+    </p>
+
+   
+
+    <!-- Button -->
+    <div>
+      <button class="next-page">Next</button>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgAudio" src="Remo Bgm-mobcupe.com.mp3" loop></audio>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    // Play audio and confetti on first click anywhere
+    window.addEventListener("click", function () {
+      const audio = document.getElementById("bgAudio");
+      audio.volume = 1;
+      audio.play();
+
+     confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { x: 0.75, y: 1 }
+    });
+    }, { once: true });
+
+    function goNext() {
+      alert("Dinesh says : Next step coming soon!");
+ // Replace with actual action
+    }
+  </script>
+
+</body>
+</html>
